@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Sales Prediction</h1>
+    <!--Main input for recieving Query to our ML-->
+    <form action="{{url_for('predict_datapoint')}}" , method="post">
+      <input
+        type="text"
+        name="TV"
+        placeholder="Advertisement on TV"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="Radio"
+        placeholder="Advertisement on Radio"
+        required="required"
+      /><br />
+      <input
+        type="text"
+        name="Newspaper"
+        placeholder="Advertisementon Newspaper"
+        required="'required"
+      /><br />
+      <button type="submit" class="btn btn-primary btn-block btn-large">
+        Predict
+      </button>
+    </form>
+    <h2>The Sales Prediction is {{results}}</h2>
+  </body>
+</html>
